@@ -1,0 +1,368 @@
+---
+import Layout from "../layouts/Layout.astro";
+import proyecto1 from "../assets/img/proyecto1.png";
+import proyecto2 from "../assets/img/proyecto2.png";
+import proyecto3 from "../assets/img/proyecto3.png";
+import proyecto4 from "../assets/img/proyecto4.png";
+import proyecto5 from "../assets/img/proyecto5.png";
+import proyecto6 from "../assets/img/proyecto6.png";
+---
+
+<Layout title={"proyectos"}>
+  <main class="">
+    <section class="banner banner_general">
+      <div class="banner_content grid-container">
+        <h1 class="text-center">/ Proyectos</h1>
+      </div>
+    </section>
+
+    <section class="proyectos">
+      <div class="grid-container" data-aos="fade-up">
+        <div class="text-center">
+          <h3>Experiencias de desarrollo</h3>
+        </div>
+        <div class="grid-x grid-margin-x">
+          <div class="cell small-4 proyecto_card">
+            <div>
+              <img src={proyecto1.src} />
+            </div>
+            <div class="content_card">
+              <h5>App Escolar</h5>
+              <p>
+                Aplicación escolar, una plataforma completa que incluye página
+                web, sistema administrable para escuelas otro para padres y uno
+                más para administradores, complementado con una app móvil para
+                android e ios
+              </p>
+              <ul>
+                <li>React Native</li>
+                <li>PHP</li>
+                <li>MYSQL</li>
+              </ul>
+            </div>
+            <div class="footer_card">
+              <a href={`/proyectos/app-escolar`} class="detalles">
+                Ver Detalles
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div>
+                <span>
+                  <a href="#!" aria-label="Ver código">
+                    <svg width="20" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://aplicacionescolar.com/"
+                    aria-label="Ver demo"
+                  >
+                    <svg
+                      width="20"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      ></path>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="cell small-4 proyecto_card">
+            <div>
+              <img src={proyecto2.src} />
+            </div>
+            <div class="content_card">
+              <h5>Sistema Rehab</h5>
+              <p>
+                Sistema realizado para administrar terapeutas, pacientes y
+                terapias, un CRUD donde se guardan y enlazan los datos de los
+                modulos mencionados antes para dar un seguimiento y guardar la
+                información de los mismos.
+              </p>
+              <ul>
+                <li>React</li>
+                <li>Node</li>
+                <li>MYSQL</li>
+              </ul>
+            </div>
+            <div class="footer_card">
+              <a href={`/proyectos/sistema-rehab`} class="detalles">
+                Ver Detalles
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div>
+                <span>
+                  <a target="_blank" href="" aria-label="Ver código">
+                    <svg width="20" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://clinicarehabsys.com"
+                    aria-label="Ver demo"
+                  >
+                    <svg
+                      width="20"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      ></path>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="cell small-4 proyecto_card">
+            <div>
+              <img src={proyecto3.src} />
+            </div>
+            <div class="content_card">
+              <h5>Password Cloud</h5>
+              <p>
+                Ultimo proyecto personal, un administrador de contraseñas
+                simple, con login, registro y la funcion principal almacenar
+                cualquier tipo de cuenta con contraseña y una referenacia o
+                link.
+              </p>
+              <ul>
+                <li>React</li>
+                <li>Node</li>
+                <li>MYSQL</li>
+              </ul>
+            </div>
+            <div class="footer_card">
+              <a href={`/proyectos/passwordcloud`} class="detalles">
+                Ver Detalles
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div>
+                <span>
+                  <a target="_blank" href="#!" aria-label="Ver código">
+                    <svg width="20" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://passwordcloud.netlify.app/"
+                    aria-label="Ver demo"
+                  >
+                    <svg
+                      width="20"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      ></path>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-x grid-margin-x">
+          <div class="cell small-4 proyecto_card">
+            <div>
+              <img src={proyecto4.src} />
+            </div>
+            <div class="content_card">
+              <h5>Urgemedica Web</h5>
+              <p>
+                Página web estatica realizada para mostrar la información sobre
+                los servicios que realiza la empresa, así como detalles extra
+                que ayudaran a crear confianza en los usuarios.
+              </p>
+              <ul>
+                <li>HTML</li>
+                <li>SASS</li>
+                <li>JS</li>
+              </ul>
+            </div>
+            <div class="footer_card">
+              <a href={`/proyectos/urgemedica`} class="detalles">
+                Ver Detalles
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div>
+                <span>
+                  <a href="#!" aria-label="Ver código">
+                    <svg width="20" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://aplicacionescolar.com/"
+                    aria-label="Ver demo"
+                  >
+                    <svg
+                      width="20"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      ></path>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="cell small-4 proyecto_card">
+            <div>
+              <img src={proyecto5.src} />
+            </div>
+            <div class="content_card">
+              <h5>Sistema Koena</h5>
+              <p>
+                Sistema realizado para administrar terapeutas, pacientes y
+                terapias, un CRUD donde se guardan y enlazan los datos de los
+                modulos mencionados antes para dar un seguimiento y guardar la
+                información de los mismos.
+              </p>
+              <ul>
+                <li>HTML</li>
+                <li>PHP</li>
+                <li>MYSQL</li>
+              </ul>
+            </div>
+            <div class="footer_card">
+              <a href={`/proyectos/sistema-koena`} class="detalles">
+                Ver Detalles
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div>
+                <span>
+                  <a target="_blank" href="" aria-label="Ver código">
+                    <svg width="20" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://clinicarehabsys.com"
+                    aria-label="Ver demo"
+                  >
+                    <svg
+                      width="20"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      ></path>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="cell small-4 proyecto_card">
+            <div>
+              <img src={proyecto6.src} />
+            </div>
+            <div class="content_card">
+              <h5>ERP CoreIncorp</h5>
+              <p>
+                Proyecto SAAS, un erp de renta para empresas pequeñas donde la
+                comodidad del usuario es el objetivo. Llegar a cubrir el mayor
+                número de necesidades en un sistema completamente modular y
+                adaptable.
+              </p>
+              <ul>
+                <li>React</li>
+                <li>Node</li>
+                <li>MYSQL</li>
+              </ul>
+            </div>
+            <div class="footer_card">
+              <a href={`/proyectos/coreincorp`} class="detalles">
+                Ver Detalles
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div>
+                <span>
+                  <a target="_blank" href="#!" aria-label="Ver código">
+                    <svg width="20" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://passwordcloud.netlify.app/"
+                    aria-label="Ver demo"
+                  >
+                    <svg
+                      width="20"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      ></path>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="mas_proyectos">
+      <ul>
+        <li>proyecto</li>
+        <li>proyecto</li>
+      </ul>
+    </section> -->
+  </main>
+</Layout>

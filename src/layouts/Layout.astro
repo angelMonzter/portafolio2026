@@ -1,0 +1,107 @@
+---
+import "../styles/styles.sass";
+import "aos/dist/aos.css";
+
+import ModoOscuro from "../components/ModoOscuro.jsx";
+const { title = "Angel Velazquez" } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+
+    <!-- Foundation -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.9.0/dist/css/foundation.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Mada:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome y Material -->
+    <script
+      src="https://kit.fontawesome.com/aa5d3c9139.js"
+      crossorigin="anonymous"></script>
+    <link
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"
+    ></script>
+
+    <!-- Lordicon -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="navegacion">
+      <div class="grid-container">
+        <div class="grid-x">
+          <div class="cell small-2 text-left">
+            <h2><span>A</span><span>/</span><span>V</span></h2>
+          </div>
+          <nav class="cell small-8 text-center">
+            <ul class="navegacion">
+              <li><a href="/">Inicio</a></li>
+              <li><a href="/proyectos">Proyectos</a></li>
+              <li><a href="/#formacion">Formación</a></li>
+              <li><a href="/#contacto">Contacto</a></li>
+            </ul>
+          </nav>
+          <!-- Aquí montamos el componente React -->
+          <div class="cell small-2 text-right">
+            <ModoOscuro client:load />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <slot />
+    <footer class="text-center">
+      <h2>Angel / Velazquez</h2>
+      <p>
+        {new Date().getFullYear()} hecho con <a href="https://astro.build/" target="_blank">Astro</a>
+      </p>
+    </footer>
+
+    <!-- Foundation JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/foundation-sites@6.9.0/dist/js/foundation.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="/src/scripts/aos-init.js"></script>
+
+    <!-- Partículas -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const container = document.querySelector(".particles");
+        if (!container) return;
+        for (let i = 0; i < 30; i++) {
+          const particle = document.createElement("div");
+          particle.classList.add("particle");
+          const size = Math.random() * 6 + 2;
+          particle.style.width = `${size}px`;
+          particle.style.height = `${size}px`;
+          particle.style.left = `${Math.random() * 100}%`;
+          particle.style.top = `${Math.random() * 100}%`;
+          const duration = 6 + Math.random() * 6;
+          const delay = Math.random() * 5;
+          particle.style.animationDuration = `${duration}s`;
+          particle.style.animationDelay = `${delay}s`;
+          container.appendChild(particle);
+        }
+      });
+    </script>
+  </body>
+</html>

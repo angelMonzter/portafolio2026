@@ -1,0 +1,165 @@
+---
+import { proyectos } from "../../data/proyectos.js";
+import { iconos } from "../../data/iconos.js";
+import Layout from "../../layouts/Layout.astro";
+
+// Obligatorio para rutas dinámicas
+export async function getStaticPaths() {
+  return proyectos.map((proyecto) => ({
+    params: { slug: proyecto.id }, // genera una página por cada proyecto
+    props: { proyecto }, // pasa los datos del proyecto como props
+  }));
+}
+
+// Recibe el proyecto directamente desde getStaticPaths
+const { proyecto } = Astro.props;
+
+// Mapear los íconos al stack del proyecto
+const stackConIconos = proyecto.stack.map((tech) => {
+  const iconObj = iconos.find((i) => i.id === tech.id);
+  return {
+    ...tech,
+    icon: iconObj?.icon || null,
+  };
+});
+---
+
+<Layout title={proyecto.nombre}>
+  <main class="proyecto_individual">
+    <!-- Banner -->
+    <section class="banner_proyecto">
+      <div class="grid-container">
+        <div class="grid-x">
+          <div class="cell large-6 small-12" data-aos="fade-right">
+            {
+              proyecto.destacado && (
+                <span class="badge_proyecto">Proyecto Destacado</span>
+              )
+            }
+
+            <div class="resumen_proyecto">
+              <h2>{proyecto.nombre}</h2>
+              <p>{proyecto.resumen}</p>
+            </div>
+
+            <div class="grid-x datos_proyecto">
+              <div class="cell large-6 small-12">
+                <p><span>Duración</span></p>
+                <strong>{proyecto.duracion}</strong>
+              </div>
+              <div class="cell large-6 small-12">
+                <p><span>Rol</span></p>
+                <strong>{proyecto.rol}</strong>
+              </div>
+              <div class="cell large-6 small-12">
+                <p><span>Cliente</span></p>
+                <strong>{proyecto.cliente}</strong>
+              </div>
+              <div class="cell large-6 small-12">
+                <p><span>Año</span></p>
+                <strong>{proyecto.anio}</strong>
+              </div>
+            </div>
+
+            <div class="botones_proyecto">
+              {
+                proyecto.link && (
+                  <a target="_blank" href={proyecto.link}>
+                    <i class="fa-solid fa-arrow-up-right-from-square" /> Ver
+                    proyecto
+                  </a>
+                )
+              }
+              {
+                proyecto.codigo && (
+                  <a href={proyecto.codigo}>
+                    <i class="fa-solid fa-code" /> Ver Código
+                  </a>
+                )
+              }
+            </div>
+          </div>
+
+          <div class="cell large-6 small-12">
+            <div class="img_proyecto" data-aos="flip-down">
+              <img src={proyecto.imagen} alt={proyecto.nombre} />
+              {proyecto.subtitulo && <p>{proyecto.subtitulo}</p>}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stack Tecnológico -->
+    <section class="stack_proyecto">
+      <div class="grid-container" data-aos="fade-up">
+        <div class="grid-x grid-margin-x text-center">
+          <div class="cell large-12">
+            <h3>Stack Tecnológico</h3>
+            <p>
+              Este proyecto combina un entorno moderno con tecnologías enfocadas
+              en rendimiento y escalabilidad.
+            </p>
+          </div>
+
+          {
+            stackConIconos.map((tech) => (
+              <div class="cell large-3 small-6 text-center">
+                <div
+                  class={[
+                    "card_stack",
+                    `color-${tech.color}`,
+                    `svg-${tech.color}`,
+                  ].join(" ")}
+                >
+                  {tech.icon && <div class="svg_stack" set:html={tech.icon} />}
+                  <h5>{tech.title}</h5>
+                  <p>{tech.text}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Descripción -->
+    <section class="descripcion_proyecto">
+      <div class="grid-container" data-aos="fade-up">
+        <div class="grid-x">
+          <div class="cell large-12">
+            <h3>Descripción del Proyecto</h3>
+
+            <h5 class="objetivos">Objetivos del Proyecto</h5>
+            <p>{proyecto.descripcion.objetivos}</p>
+
+            <h5 class="desafios">Desafíos Enfrentados</h5>
+            <ul>
+              {
+                proyecto.descripcion.desafios.map((d) => (
+                  <li>
+                    <p>
+                      <img src="/img/check.svg" /> {d}
+                    </p>
+                  </li>
+                ))
+              }
+            </ul>
+
+            <h5 class="soluciones">Soluciones Implementadas</h5>
+            <ul>
+              {
+                proyecto.descripcion.soluciones.map((s) => (
+                  <li>
+                    <p>{s}</p>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+</Layout>

@@ -1,0 +1,571 @@
+$font-titles: "Alata", sans-serif
+$font-content: "Mada", sans-serif
+$blue: #1D273A
+$blueKing: #141C35
+$purple: #8E76FF
+$blueTwo: #4B6493
+$green: #0ea5a3
+
+$morado: #2C355F
+$rosa: #343360
+$verde: #1B4649
+$titleRosa: #996EFF
+$titleMorado: #6366F1
+$titleVerde: #12AB7A
+
+p, span, a, div, li, body 
+  font-family: $font-content
+
+h1, h2, h3, h4, h5 
+  font-family: $font-titles
+
+h3
+  font-size: 3rem
+header 
+  background-color: $blue
+  color: white
+  position: fixed
+  width: 100%
+  z-index: 999
+  h2
+    font-family: $font-titles
+    span:nth-child(1)
+      font-size: 2rem
+      font-weight: bold
+      position: relative
+      top: -4px
+      left: 4px
+    span:nth-child(2)
+      color: $purple!important
+      font-weight: bold
+    span:nth-child(3)
+      font-size: 2rem
+      font-weight: bold
+      position: relative
+      top: 4px
+      right: 4px
+  i
+    font-size: 25px
+    margin-top: 20px
+    cursor: pointer
+    
+.navegacion
+  ul
+    margin: 4px auto 0!important
+    list-style: none
+    li
+      display: inline-block
+      padding: 20px 10px 0
+      a
+        color: white
+        &:hover
+          color: #BCB0F4
+          transition: .2s all ease
+
+.banner
+  position: relative
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+  background: linear-gradient(180deg, #0f172a, #141c35)
+  overflow: hidden
+  color: white
+  .banner_content
+    position: relative
+    top: 0px
+    h1.nombre
+      display: inline-block
+      transition: transform 0.8s ease, opacity 0.8s ease
+      display: flex
+      justify-content: center
+      align-items: center
+      gap: 1rem
+      letter-spacing: 3px
+      text-transform: uppercase
+      position: relative
+      span
+        font-size: 9rem
+        font-family: $font-titles
+        
+    .nombre-izq
+      transform: translateX(-100%)
+      opacity: 0
+      animation: slideIzq 1s forwards 0.3s
+
+    .nombre-der
+      transform: translateX(100%)
+      opacity: 0
+      animation: slideDer 1s forwards 0.3s
+
+    .nombre-slash
+      color: $purple
+      font-size: 9.5rem
+      padding: 0 10px
+      transform: scaleY(1.3)
+    h2
+      font-size: 5rem
+      color: $blueTwo
+    a
+      border: 2px solid $purple
+      padding: 10px 110px 
+      border-radius: 10px
+      color: $purple
+      font-weight: bold
+      position: relative
+      top: 55px
+      &:hover
+        background-color: $purple
+        color: white
+        transition: .3s all ease
+    .arrow
+      position: relative
+      top: 200px
+      i
+        font-size: 25px
+        color: $blueTwo
+// === ANIMACIONES ===
+@keyframes slideIzq
+  to
+    transform: translateX(0)
+    opacity: 1
+
+@keyframes slideDer
+  to
+    transform: translateX(0)
+    opacity: 1
+
+.particles 
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 0
+  overflow: hidden
+
+.particle 
+  position: absolute
+  background: linear-gradient(45deg, #6366f1, #8b5cf6)
+  border-radius: 50%
+  opacity: 0.15
+  animation: floatUp 8s ease-in-out infinite
+
+@keyframes floatUp 
+  0% 
+    transform: translateY(0) scale(1)
+    opacity: 0.2
+  50% 
+    transform: translateY(-40px) scale(1.2)
+    opacity: 0.4
+  100% 
+    transform: translateY(0) scale(1)
+    opacity: 0.2
+
+.banner_general
+  height: 350px!important
+  h1
+    font-size: 6rem!important
+    margin-top: 50px
+
+.proyectos
+  background-color: $blue 
+  color: white
+  padding: 90px 0
+  .proyecto_card
+    padding: 20px
+    border: 1px solid $blueTwo
+    border-radius: 15px
+    margin-top: 35px
+    overflow: hidden // evita que el zoom se salga del borde redondeado
+    // Contenedor de la imagen
+    > div:first-child
+      border-radius: 15px
+      overflow: hidden // recorta el exceso del zoom
+      img
+        width: 100%
+        height: auto
+        display: block
+        border-radius: 15px
+        transition: transform .5s ease
+
+    &:hover img
+      transform: scale(1.2)
+    &:hover h5
+      color: $titleRosa
+      transition: all .5s ease
+    p
+      color: #c4d1e6
+      line-height: 23px
+
+    .content_card
+      padding-top: 20px
+      p
+        min-height: 115px
+
+    ul
+      list-style: none
+      margin: 0
+      padding-top: 10px
+      li
+        display: inline-block
+        border-radius: 15px
+        padding: 3px 15px
+        font-weight: bold
+        margin-right: 10px
+        &:nth-child(1)
+          background-color: $morado
+          color: $titleMorado
+        &:nth-child(2)
+          background-color: $rosa
+          color: $titleRosa
+        &:nth-child(3)
+          background-color: $verde
+          color: $titleVerde
+
+    .footer_card
+      display: flex
+      justify-content: space-between
+      margin-top: 20px
+      .detalles
+        font-family: $font-titles
+        color: $purple
+        i
+          position: relative
+          left: 4px
+          font-size: 10px
+      div
+        width: 70px
+        a
+          padding: 5px
+
+  .ver_proyectos
+    margin-top: 60px
+    a
+      border: 2px solid $purple
+      padding: 10px 110px 
+      border-radius: 10px
+      color: $purple
+      font-weight: bold
+      &:hover
+        background-color: $purple
+        color: white
+        transition: .3s all ease
+
+
+.formacion
+  background-color: $blueKing
+  color: white
+  padding: 90px 0
+  h3
+    font-size: 4rem
+    line-height: 4rem
+  ul
+    position: relative
+    list-style: none
+    margin: 0
+    padding: 0
+    &::before
+      content: ""
+      position: absolute
+      left: 20px
+      top: 0
+      bottom: 0
+      width: 2px
+      background: linear-gradient(to bottom, $morado, $rosa, $verde)
+    li
+      position: relative
+      margin-bottom: 40px
+      padding-left: 60px
+      &::before
+        content: ""
+        position: absolute
+        left: 11px
+        top: 5px
+        width: 18px
+        height: 18px
+        border-radius: 50%
+        background: $morado
+        box-shadow: 0 0 0 3px transparent
+      &:nth-child(1)::before
+        background: $titleMorado
+      &:nth-child(2)::before
+        background: $titleRosa
+      &:nth-child(3)::before
+        background: $titleVerde
+      &:nth-child(4)::before
+        background: $morado
+      h5
+        margin: 0 0 5px
+        color: white
+      p
+        margin: 0
+        font-size: 0.9rem
+        color: #ccc
+        line-height: 1.5
+
+
+.plataformas
+  background-color: $blue
+  color: white
+  padding: 90px 0
+  height: 355px
+  .grid-container
+    .small-6
+      position: relative
+  a
+      //border: 2px solid $purple
+      border-radius: 10px
+      color: $purple
+      font-weight: bold
+      //&:hover
+      //  background-color: $purple
+      //  color: white
+      //  transition: .3s all ease
+      span
+        font-size: 2rem
+  lord-icon
+    position: relative
+    top: 15px
+  h3
+    margin-top: 20px
+
+.colaborar
+  background-color: $blueKing
+  color: white
+  padding: 90px 0
+  a
+    color: white
+    &:hover div:nth-child(2) i
+      color: $titleMorado
+      font-weight: bold
+  .card_colaborar
+    background-color: $blue
+    padding: 20px
+    border-radius: 10px
+    margin-top: 40px
+    display: flex
+    justify-content: space-between
+    i, img
+      height: 20px
+    p
+      margin-bottom: 0px
+      span
+        margin-left: 20px
+    div:nth-child(1)
+      i, img
+          background-color: $morado
+          height: 30px
+          width: 30px
+          border-radius: 4px
+          text-align: center
+          align-content: center
+          top: 5px
+          color: $titleMorado
+    div:nth-child(2)
+      i, img
+        color: $blueTwo
+        margin-top: 7px
+        
+footer
+  padding: 20px 0
+  background-color: $blue
+  color: white
+  h2
+    font-size: 1.8rem
+  p
+    margin-bottom: 0px
+
+
+/*proyecto individual*/
+.banner_proyecto
+  background-color: $blueKing
+  color: white
+  padding-top: 130px
+  padding-bottom: 50px
+  .img_proyecto
+    position: relative
+    img
+      margin-top: 50px
+      border-radius: 10px
+    p
+      position: absolute
+      top: 91%
+      background-color: rgba(0, 0, 0, 0.5)
+      width: 100%
+      padding: 3px 0 5px
+      text-align: center
+  .badge_proyecto
+    background-color: $morado
+    color: $titleMorado
+    padding: 5px 20px
+    border-radius: 20px
+    font-size: .8rem
+    font-weight: bold
+  .resumen_proyecto
+    h2
+      font-size: 2.5rem
+      font-weight: bold
+      line-height: 2.5rem
+      margin-top: 20px
+    p
+      color: #7893C6
+      font-size: 1.5rem
+      line-height: 1.7rem
+      margin-top: 20px
+      padding-right: 20px
+  .datos_proyecto
+    p
+      margin-bottom: 0px!important
+      font-family: $font-titles
+      color: #7893C6
+      font-size: 1rem
+      font-weight: bold
+    strong
+      font-size: 1.2rem
+  .botones_proyecto
+    margin-top: 30px
+    a
+      font-weight: bold
+      margin-right: 10px
+      padding: 8px  
+      border-radius: 10px
+      border: 2px solid $purple
+      font-size: .9rem
+    a:nth-child(1)
+      color: $purple
+      &:hover
+        background-color: $purple
+        color: white
+        transition: .3s all ease
+    a:nth-child(2)
+      color: white
+      background-color: $purple
+      &:hover
+        background-color: transparent
+        color: $purple
+        transition: .3s all ease
+
+.stack_proyecto
+  background-color: $blue
+  padding: 60px 0
+  h3, p
+    color: white
+  .card_stack
+    height: 160px
+    padding: 20px
+    border-radius: 10px
+    border: 1px solid $blueTwo
+    margin-bottom: 20px
+    h5
+      color: white
+      margin-bottom: 0px
+    p
+      color: #7893C6
+    .svg_stack
+      border-radius: 50px
+      height: 50px
+      width: 50px
+      background-color: $rosa
+      text-align: center
+      margin: 0 auto 10px
+      //svg
+      //  margin-top: 12px
+      //  fill: $titleRosa
+.descripcion_proyecto
+  background-color: $blueKing
+  padding: 60px 0
+  color: white
+  h3
+    margin-bottom: 40px
+  p
+    color: #7893C6
+  ul
+    list-style: none
+    margin-left: 0px
+    li img
+      width: 20px
+  .objetivos
+    color: $titleMorado
+  .desafios
+    color: $titleVerde
+  .soluciones
+    color: $titleRosa
+
+$color-1: #2C355F
+$color-2: #343360
+$color-3: #1B4649
+$color-4: #52526F
+$color-5: #734B42
+$color-6: #11416A
+$color-7: #662362
+$color-8: #4D4C15
+
+$svg-1: rgb(92, 96, 225)
+$svg-2: rgb(139, 92, 246)
+$svg-3: rgb(16, 185, 129)
+$svg-4: rgb(197, 197, 234)
+$svg-5: rgb(241, 126, 99)
+$svg-6: rgb(63, 129, 187)
+$svg-7: rgb(162, 86, 157)
+$svg-8: rgb(140, 139, 43)
+
+$colors: $color-1, $color-2, $color-3, $color-4, $color-5, $color-6, $color-7, $color-8
+
+@each $color in $colors
+  $index: index($colors, $color)
+  .card_stack.color-#{$index}
+    .svg_stack
+      background-color: $color
+
+$colors_svg: $svg-1, $svg-2, $svg-3, $svg-4, $svg-5, $svg-6, $svg-7, $svg-8
+
+@each $svg in $colors_svg
+  $svgIndex: index($colors_svg, $svg)
+  .svg-#{$svgIndex}
+    .svg_stack
+      svg
+        margin-top: 12px
+        fill: $svg
+
+/*animaciones*/
+@keyframes bounce
+  0%, 100%
+    transform: translateY(-25%)
+    animation-timing-function: cubic-bezier(0.8,0,1,1)
+  
+
+  50%
+    transform: none
+    animation-timing-function: cubic-bezier(0,0,0.2,1)
+  
+.animate-bounce
+  animation: bounce 1s infinite
+
+.popup-mostrar
+  position: fixed
+  bottom: 20px
+  right: 20px
+  background: rgb(0,0,0,)
+  color: #fff
+  padding: 10px 15px
+  border-radius: 10px
+  font-size: 0.9rem
+  opacity: 0
+  animation: fadeInOut 3s ease forwards
+  z-index: 1000
+  p
+    font-family: $font-titles
+
+@keyframes fadeInOut
+  0%
+    opacity: 0
+    transform: translateY(20px)
+  10%
+    opacity: 1
+    transform: translateY(0)
+  90%
+    opacity: 1
+  100%
+    opacity: 0
+    transform: translateY(20px)

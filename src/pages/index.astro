@@ -1,0 +1,383 @@
+---
+import proyecto1 from "../assets/img/proyecto1.png";
+import proyecto2 from "../assets/img/proyecto2.png";
+import proyecto3 from "../assets/img/proyecto3.png";
+import linkedin from "../assets/img/linkedin-svgrepo-com.svg";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title={"Inicio"}>
+  <!-- MAIN -->
+  <main>
+    <!-- Banner con partículas -->
+    <section class="banner">
+      <div class="particles"></div>
+
+      <div class="banner_content grid-container parallax-bg">
+        <h1 class="nombre">
+          <span class="nombre-izq">Angel</span>
+          <span class="nombre-slash">/</span>
+          <span class="nombre-der">Velazquez</span>
+        </h1>
+        <div class="grid-x">
+          <div class="cell small-7">
+            <h2 data-aos="fade-right">Desarrollador Web</h2>
+          </div>
+          <div class="cell small-5 text-center">
+            <a
+              target="_blank"
+              href="https://api.whatsapp.com/send/?phone=12318334109&text&type=phone_number&app_absent=0"
+              >Contactar</a
+            >
+          </div>
+        </div>
+        <div class="text-center arrow">
+          <i class="fa-solid fa-arrow-down animate-bounce"></i>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PROYECTOS -->
+    <section class="proyectos">
+      <div class="grid-container" data-aos="fade-up">
+        <div class="text-center">
+          <h3>Proyectos destacados</h3>
+          <p>
+             Proyectos web que combinan creatividad y eficiencia. Cada proyecto ha sido desarrollado pensando en la experiencia del usuario y la optimización del rendimiento.
+          </p>
+        </div>
+
+        <!-- Aquí van las tarjetas proyectos  -->
+        <div class="grid-x grid-margin-x">
+          <div class="cell small-4 proyecto_card">
+            <div>
+              <img src={proyecto1.src} alt="App Escolar" />
+            </div>
+            <div class="content_card">
+              <h5>App Escolar</h5>
+              <p>
+                Aplicación escolar, una plataforma completa que incluye página
+                web, sistema administrable para escuelas otro para padres y uno
+                más para administradores, complementado con una app móvil para
+                android e ios
+              </p>
+              <ul>
+                <li>React Native</li>
+                <li>PHP</li>
+                <li>MYSQL</li>
+              </ul>
+            </div>
+            <div class="footer_card">
+              <a href="proyecto1.html" class="detalles">
+                Ver Detalles
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div>
+                <span>
+                  <a href="#!" aria-label="Ver código">
+                    <svg width="20" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://aplicacionescolar.com/"
+                    aria-label="Ver demo"
+                  >
+                    <svg
+                      width="20"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      ></path>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="cell small-4 proyecto_card">
+            <div>
+              <img src={proyecto2.src} />
+            </div>
+            <div class="content_card">
+              <h5>Sistema Rehab</h5>
+              <p>
+                Sistema realizado para administrar terapeutas, pacientes y
+                terapias, un CRUD donde se guardan y enlazan los datos de los
+                modulos mencionados antes para dar un seguimiento y guardar la
+                información de los mismos.
+              </p>
+              <ul>
+                <li>React</li>
+                <li>Node</li>
+                <li>MYSQL</li>
+              </ul>
+            </div>
+            <div class="footer_card">
+              <a href="#!" class="detalles">
+                Ver Detalles
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div>
+                <span>
+                  <a target="_blank" href="" aria-label="Ver código">
+                    <svg width="20" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://clinicarehabsys.com"
+                    aria-label="Ver demo"
+                  >
+                    <svg
+                      width="20"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      ></path>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="cell small-4 proyecto_card">
+            <div>
+              <img src={proyecto3.src} />
+            </div>
+            <div class="content_card">
+              <h5>Password Cloud</h5>
+              <p>
+                Ultimo proyecto personal, un administrador de contraseñas
+                simple, con login, registro y la funcion principal almacenar
+                cualquier tipo de cuenta con contraseña y una referenacia o
+                link.
+              </p>
+              <ul>
+                <li>React</li>
+                <li>Node</li>
+                <li>MYSQL</li>
+              </ul>
+            </div>
+            <div class="footer_card">
+              <a href="#!" class="detalles">
+                Ver Detalles
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <div>
+                <span>
+                  <a target="_blank" href="#!" aria-label="Ver código">
+                    <svg width="20" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://passwordcloud.netlify.app/"
+                    aria-label="Ver demo"
+                  >
+                    <svg
+                      width="20"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      ></path>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cell small-12 text-center ver_proyectos">
+          <a href="/proyectos">Ver Todos los Proyectos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formación -->
+    <section class="formacion" id="formacion">
+      <div class="grid-container" data-aos="fade-up">
+        <div class="grid-x">
+          <div class="cell small-5">
+            <h3>Formación y Experiencia</h3>
+          </div>
+          <div class="cell small-7">
+            <ul>
+              <li>
+                <h5>Desarrollo Web HTML5, CSS3, JS AJAX PHP y MySQL</h5>
+                <p>
+                  HTML, CSS, SASS, Workflows, JavaScript, Fetch, PHP, POO,
+                  MySQL, MVC y seguridad.
+                </p>
+              </li>
+              <li>
+                <h5>JavaScript Moderno</h5>
+                <p>
+                  Prototypes, Promises, Fetch API, Async/Await, React, Node,
+                  Express y MongoDB.
+                </p>
+              </li>
+              <li>
+                <h5>React Native</h5>
+                <p>
+                  TypeScript, React Native CLI, Google Maps, GPS, hooks y
+                  autenticación.
+                </p>
+              </li>
+              <li>
+                <h5>Laravel</h5>
+                <p>Sail, Docker, Livewire, Tailwind CSS, React, API's.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Otras plataformas -->
+    <section class="plataformas">
+      <div class="grid-container" data-aos="fade-up">
+        <div class="grid-x">
+          <div class="cell small-6">
+            <div class="grid-x grid-margin-y">
+              <div class="cell small-6 large-6">
+                <a target="_blank" href="https://github.com/angelMonzter">
+                  <lord-icon
+                    src="https://cdn.lordicon.com/lllcnxva.json"
+                    trigger="hover"
+                    colors="primary:#8e76ff,secondary:#ebe6ef,tertiary:#8e76ff"
+                    style="width:50px;height:50px"
+                  >
+                  </lord-icon>
+                  <span>GitHub</span>
+                </a>
+              </div>
+              <div class="cell small-6 large-6">
+                <a
+                  target="_blank"
+                  href="https://codepen.io/angel-efren-albarran-velazquez"
+                >
+                  <lord-icon
+                    src="https://cdn.lordicon.com/xpesqpji.json"
+                    trigger="hover"
+                    colors="primary:#8e76ff,secondary:#ffffff"
+                    style="width:50px;height:50px"
+                  >
+                  </lord-icon>
+                  <span>Codepen</span>
+                </a>
+              </div>
+              <div class="cell small-6 large-6">
+                <a target="_blank" href="#!">
+                  <lord-icon
+                    src="https://cdn.lordicon.com/kgtbcywd.json"
+                    trigger="hover"
+                    colors="primary:#ffffff,secondary:#8e76ff,tertiary:#ebe6ef,quaternary:#16a9c7,quinary:#e8308c"
+                    style="width:50px;height:50px"
+                  >
+                  </lord-icon>
+                  <span>Netlify</span>
+                </a>
+              </div>
+              <div class="cell small-6 large-6">
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/codigoenlinea/"
+                >
+                  <lord-icon
+                    src="https://cdn.lordicon.com/fmwsotep.json"
+                    trigger="hover"
+                    colors="primary:#8e76ff,secondary:#ffffff,tertiary:#8e76ff"
+                    style="width:50px;height:50px"
+                  >
+                  </lord-icon>
+                  <span>Facebook</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="cell small-6">
+            <h3>Otras Plataformas</h3>
+            <p>Otras plataformas y herramientas, compartiendo código en GitHub, creando demos en CodePen y desplegando aplicaciones en Netlify para experimentar y aprender nuevas tecnologías.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto / Colaborar -->
+    <section class="colaborar" id="contacto">
+      <div class="grid-container" data-aos="fade-up">
+        <div class="grid-x grid-margin-x">
+          <div class="text-center small-12">
+            <h3>¿Listo para Colaborar?</h3>
+            <p>
+                Siempre estoy abierto a nuevas colaboraciones y proyectos interesantes. Si quieres trabajar juntos o simplemente charlar sobre desarrollo web, no dudes en escribirme.
+            </p>
+          </div>
+          <div class="cell small-6">
+            <a href="mailto:angelvelazquez301@hotmail.com" target="_blank">
+              <div class="card_colaborar">
+                <div>
+                  <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    <span
+                      ><strong>Email</strong> - angelvelazquez301@hotmail.com</span
+                    >
+                  </p>
+                </div>
+                <div><i class="fa-solid fa-link"></i></div>
+              </div>
+            </a>
+          </div>
+          <div class="cell small-6">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/angel-efren-albarran-velazquez-72ab1b15a/"
+            >
+              <div class="card_colaborar">
+                <div>
+                  <p>
+                    <img src={linkedin.src} alt="LinkedIn" />
+                    <span
+                      ><strong>LinkedIn</strong> - Angel Efren Albarran Velazquez</span
+                    >
+                  </p>
+                </div>
+                <div><i class="fa-solid fa-link"></i></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
