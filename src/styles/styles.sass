@@ -1,3 +1,5 @@
+@use 'sass:list'
+
 $font-titles: "Alata", sans-serif
 $font-content: "Mada", sans-serif
 $blue: #1D273A
@@ -513,7 +515,7 @@ $svg-8: rgb(140, 139, 43)
 $colors: $color-1, $color-2, $color-3, $color-4, $color-5, $color-6, $color-7, $color-8
 
 @each $color in $colors
-  $index: index($colors, $color)
+  $index: list.index($colors, $color)
   .card_stack.color-#{$index}
     .svg_stack
       background-color: $color
@@ -521,7 +523,7 @@ $colors: $color-1, $color-2, $color-3, $color-4, $color-5, $color-6, $color-7, $
 $colors_svg: $svg-1, $svg-2, $svg-3, $svg-4, $svg-5, $svg-6, $svg-7, $svg-8
 
 @each $svg in $colors_svg
-  $svgIndex: index($colors_svg, $svg)
+  $svgIndex: list.index($colors_svg, $svg)
   .svg-#{$svgIndex}
     .svg_stack
       svg
